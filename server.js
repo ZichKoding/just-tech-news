@@ -1,4 +1,3 @@
-// Stopping at 14.4.3 finish at home
 const path = require('path');
 const express = require('express');
 require('dotenv').config();
