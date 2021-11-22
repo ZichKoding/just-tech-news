@@ -2,10 +2,12 @@ const path = require('path');
 const express = require('express');
 require('dotenv').config();
 const exphbs = require('express-handlebars');
-const hbs = exphbs.create({});
+const helpers = require('./utils/helpers');
+const hbs = exphbs.create({ helpers });
 const routes = require('./controllers/');
 const sequelize = require('./config/connection');
 const session = require('express-session');
+
 
 const app = express();
 const PORT = process.env.PORT || 3001;
