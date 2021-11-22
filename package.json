@@ -5,7 +5,7 @@
   "main": "server.js",
   "start": "node server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node server.js"
   },
   "repository": {
@@ -29,5 +29,7 @@
     "mysql2": "^2.3.3-rc.0",
     "sequelize": "^6.9.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "jest": "^27.3.1"
+  }
 }
