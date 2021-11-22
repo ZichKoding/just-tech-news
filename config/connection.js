@@ -4,14 +4,15 @@ require('dotenv').config();
 
 let sequelize;
 
-if ('https://zichko-tech-news.herokuapp.com') {
-    sequelize = new Sequelize('https://zichko-tech-news.herokuapp.com');
+if (process.env.JAWSDB_URL) {
+  sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
-    sequelize = new Sequelize('just_tech_news_db', 'root', 'ThisIsMyPasswordAndThereIsOnlyOneLikeIt', {
-        host: 'localhost',
-        dialect: 'mysql',
-        port: 3306
-    });
+  sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PW, {
+    host: 'localhost',
+    dialect: 'mysql',
+    port: 3306
+  });
 }
+
 
 module.exports = sequelize;
