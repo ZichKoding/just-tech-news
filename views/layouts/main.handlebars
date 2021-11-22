@@ -15,8 +15,11 @@
                     <a href="/">Just Tech News</a>
                 </h1>
                 <nav>
+                    {{#if loggedIn}}
                     <button class="btn-no-style" id="logout">logout</button>
+                    {{else}}
                     <a href="/login">login</a>
+                    {{/if}}
                 </nav>
             </header>
             <main>
@@ -26,6 +29,8 @@
                 Thanks for visiting!
             </footer>
         </div>
+        {{#if loggedIn}}
         <script src="/javascript/logout.js"></script>
+        {{/if}}
     </body>
 </html>
