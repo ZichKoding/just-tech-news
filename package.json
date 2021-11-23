@@ -12,8 +12,10 @@
     "type": "git",
     "url": "git+https://github.com/ZichKoding/just-tech-news.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "heroku"
+  ],
+  "author": "Chris Zichko",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ZichKoding/just-tech-news/issues"
